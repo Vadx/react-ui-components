@@ -1,22 +1,24 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import styled from 'styled-components';
 
 import Button from './elements/Button';
+import Header from './pages/layout/Header';
+
+const MainWrap = styled.div`
+  text-align: center;
+`;
+
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Simle React UI Components</h2>
-        </div>
+      <MainWrap>
+        <Header/>
         <div>
-        <Button>Normal Button</Button>
-        <Button flat>Flat Button</Button>
+          <Button>Normal Button</Button>
+          <Button flat>Flat Button</Button>
         </div>
-      </div>
+      </MainWrap>
     );
   }
 }
