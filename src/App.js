@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import Button from './elements/Button';
 import Switch from './elements/Switch';
+import Dropdown from './elements/Dropdown';
 import Header from './pages/layout/Header';
 
 const MainWrap = styled.div`
@@ -11,6 +12,7 @@ const MainWrap = styled.div`
 const ContentPage = styled.div`
   max-width: 1000px;
   margin: auto;
+  padding: 10px;
 `;
 
 const DemoRow = styled.div`
@@ -46,6 +48,10 @@ class App extends Component {
           <DemoRow>
             <Button>Normal Button</Button>
             <Button flat>Flat Button</Button>
+          </DemoRow>
+          <TitleRow>Dropdown</TitleRow>
+          <DemoRow>
+            <Dropdown/>
           </DemoRow>
           <TitleRow>Switch</TitleRow>
           <DemoRow>
