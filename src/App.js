@@ -1,9 +1,15 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
-import Button from './elements/Button';
-import Switch from './elements/Switch';
-import Dropdown from './elements/Dropdown';
+import {
+  Route,
+  NavLink,
+  HashRouter
+} from "react-router-dom";
+
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Contacts from "./pages/Contacts";
 import Header from './pages/layout/Header';
 
 const MainWrap = styled.div`
@@ -15,50 +21,19 @@ const ContentPage = styled.div`
   padding: 10px;
 `;
 
-const DemoRow = styled.div`
-  margin-bottom: 35px;
-`;
-
-
-const TitleRow = styled.h4`
-  font-size: 16px;
-  font-weight: 500;
-  margin: 0 0 10px 0;
-  text-transform: uppercase;
-  color: rgba(0,0,0,.54)
-`;
-
-const SubTitle = styled.p`
-  font-size: 14px;
-  margin: 0 0 20px 0;
-  color: rgba(0,0,0,.54)
-`;
-
-
-
-
 class App extends Component {
   render() {
     return (
-      <MainWrap>
-        <Header/>
-        <ContentPage>
-          <TitleRow>Buttons</TitleRow>
-          <SubTitle>Variations on Material Design buttons.</SubTitle>
-          <DemoRow>
-            <Button>Normal Button</Button>
-            <Button flat>Flat Button</Button>
-          </DemoRow>
-          <TitleRow>Dropdown</TitleRow>
-          <DemoRow>
-            <Dropdown/>
-          </DemoRow>
-          <TitleRow>Switch</TitleRow>
-          <DemoRow>
-            <Switch />
-          </DemoRow>
-        </ContentPage>
-      </MainWrap>
+      <HashRouter>
+        <MainWrap>
+          <Header/>
+          <ContentPage>
+            <Route exact path="/" component={Home}/>
+            <Route path="/About" component={About}/>
+            <Route path="/contacts" component={Contacts}/>
+          </ContentPage>
+        </MainWrap>
+      </HashRouter>
     );
   }
 }

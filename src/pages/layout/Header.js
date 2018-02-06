@@ -17,19 +17,10 @@ const HeaderWrap = styled.div`
   display: -ms-flex;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 
   box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.12);
 `;
-
-// const rotate360 = keyframes`
-//   from {
-//     transform: rotate(0deg);
-//   }
-//
-//   to {
-//     transform: rotate(360deg);
-//   }
-// `;
 
 const Icon = styled.span`
   display: inline-block;
@@ -42,15 +33,19 @@ const Icon = styled.span`
   background-position: -10px 0;
 `;
 
-//animation: ${rotate360} 20s linear infinite;
+const TitleText = styled.span`
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 15px;
+`;
 
 class Header extends Component {
   render() {
     return (
       <HeaderWrap>
-        <Icon />
         <Title>
-          Simle React UI Components
+          <Icon />
+          <TitleText>Simle React UI Components</TitleText>
         </Title>
         <Menu/>
       </HeaderWrap>
