@@ -2,6 +2,46 @@
 UI components for React
 [https://vadx.github.io/react-ui-components/]
 
+## Folder Structure
+
+After creation, your project should look like this:
+
+```
+react-ui-components/
+  README.md
+  node_modules/
+  package.json
+  public/
+    index.html
+    favicon.ico
+    manifest.json
+  src/
+    elements/
+      Button/
+        Button.js
+        index.js
+      Dropdown/
+        Dropdown.js
+        index.js
+      Switch/
+        Switch.js
+        index.js
+      Pages/
+        layout/
+        Header.js
+        Menu.js
+      About.js
+      Contcts.js
+      Home.js
+    App.css
+    App.js
+    App.test.js
+    index.css
+    index.js
+    logo.svg
+    registerServiceWorker.js
+```
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -23,24 +63,3 @@ See the section about [running tests](#running-tests) for more information.
 
 Builds the app for production to the `build` folder.<br>
 It correctly bundles React in production mode and optimizes the build for the best performance.
-
-## Folder Structure
-
-After creation, your project should look like this:
-
-```
-react-ui-components/
-  README.md
-  node_modules/
-  package.json
-  public/
-    index.html
-    favicon.ico
-  src/
-    App.css
-    App.js
-    App.test.js
-    index.css
-    index.js
-    logo.svg
-```
